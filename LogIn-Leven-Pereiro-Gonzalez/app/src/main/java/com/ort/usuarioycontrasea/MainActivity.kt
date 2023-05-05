@@ -28,10 +28,12 @@ class MainActivity : AppCompatActivity() {
         input = findViewById(R.id.edit_txt_user)
         label = findViewById(R.id.textView)
         inputPSWR = findViewById(R.id.edit_txt_pwr)
-        user.add("Ari.Dayan")
-        user.add("Liam.Polo")
-        password.add("1234")
-        password.add("5678")
+        user.add("Thiago.pereiro")
+        user.add("Thiago.Gonzalez")
+        user.add("Ota.Leven")
+        password.add("12340")
+        password.add("56780")
+        password.add("43210")
         label.text = ""
 
         btn.setOnClickListener {
@@ -44,18 +46,35 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Snackbar.make(it, "ingrese usuario y/o", Snackbar.LENGTH_SHORT).show()
             }
-            // (str_pass == password) &&(inputText == user)
+            
             if ((user.contains(inputText) == true) && (password.contains(str_pass) == true)) {
 
-                if ((inputText == "Ari.Dayan") && (str_pass == "1234")) {
+                if ((inputText == "Thiago.Pereiro") && (str_pass == "12340")) {
 
                     Snackbar.make(it, "sesion iniciada", Snackbar.LENGTH_SHORT).show()
 
                 }
-                if ((inputText == "Liam.Polo") && (str_pass == "5678")) {
+                else {
+                    Snackbar.make(it, "usuario y/o contraseña incorrectas", Snackbar.LENGTH_SHORT)
+                        .show()
+
+
+                }
+                if ((inputText == "Thiago.Gonzalez") && (str_pass == "56780")) {
 
                     Snackbar.make(it, "sesion iniciada", Snackbar.LENGTH_SHORT).show()
                 } else {
+                    Snackbar.make(it, "usuario y/o contraseña incorrectas", Snackbar.LENGTH_SHORT)
+                        .show()
+
+
+                }
+                 if ((inputText == "Ota.Leven") && (str_pass == "43210")) {
+
+                    Snackbar.make(it, "sesion iniciada", Snackbar.LENGTH_SHORT).show()
+
+                }
+                else {
                     Snackbar.make(it, "usuario y/o contraseña incorrectas", Snackbar.LENGTH_SHORT)
                         .show()
 
